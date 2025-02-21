@@ -8,8 +8,6 @@ const mongoose = require("mongoose");
 const fileUpload = require("express-fileupload");
 const cloudinary = require("cloudinary").v2;
 
-mongoose.connect("mongodb://localhost:27017/vinted");
-
 // Déclaration de la fonction qui permet de transformer mes images en base 64
 const convertToBase64 = (file) => {
   return `data:${file.mimetype};base64,${file.data.toString("base64")}`;
